@@ -10,6 +10,7 @@ body{
     font-family:'Inter',sans-serif;
     background:#fafafa;
     color:#222;
+    scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -47,15 +48,23 @@ body{
 
 .hero-section{
     position:relative;
-    min-height:850px;
-
-    background:url('../images/hero-bg.webp');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
+    min-height:550px;
+    overflow:hidden;
     display:flex;
     align-items:center;
+}
+
+.hero-video-wrapper{
+    position:absolute;
+    inset:0;
+    z-index:0;
+}
+
+.hero-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .hero-badge{
@@ -72,13 +81,18 @@ body{
 .hero-overlay{
     position:absolute;
     inset:0;
-
+    z-index:1;
     background:linear-gradient(
         90deg,
         rgba(255,255,255,.95) 0%,
         rgba(255,255,255,.85) 35%,
         rgba(255,255,255,.15) 100%
     );
+}
+
+.hero-section > .container{
+    position:relative;
+    z-index:2;
 }
 
 .hero-title{
@@ -140,8 +154,10 @@ body{
 }
 
 .primary-btn:hover{
-    color:#2a2a2a;
-    
+    background:#dba321;
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px rgba(13,23,42,.16);
 }
 
 .secondary-btn{
@@ -1097,4 +1113,615 @@ body{
         font-size:14px;
     }
 
+}
+
+/* ====================================
+   MBA GENERAL LANDING PAGE ADDITIONS
+==================================== */
+
+.hero-shell{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:40px;
+    align-items:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-subtext{
+    color:#475467;
+    line-height:1.8;
+    margin-bottom:30px;
+    max-width:620px;
+}
+
+.hero-buttons .secondary-btn{
+    color:#fff;
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.28);
+    padding:14px 24px;
+    border-radius:12px;
+    font-weight:600;
+    backdrop-filter:blur(8px);
+}
+
+.hero-buttons .secondary-btn:hover{
+    background:rgba(255,255,255,.28);
+    color:#fff;
+}
+
+.hero-metrics{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:14px;
+    margin-top:28px;
+}
+
+.metric-tile{
+    background:rgba(255,255,255,.86);
+    border:1px solid rgba(219,163,33,.15);
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+    border-radius:18px;
+    padding:16px;
+    text-align:center;
+    animation:floatCard 4s ease-in-out infinite;
+}
+
+.metric-tile strong{
+    display:block;
+    font-size:20px;
+    color:#111827;
+}
+
+.metric-tile span{
+    display:block;
+    color:#6b7280;
+    font-size:13px;
+    margin-top:4px;
+}
+
+.hero-visual{
+    position:relative;
+    z-index:2;
+}
+
+.hero-visual-card{
+    position:relative;
+    padding:32px;
+    border-radius:30px;
+    background:linear-gradient(135deg, rgba(255,255,255,.96) 0%, rgba(255,248,232,.92) 100%);
+    border:1px solid rgba(255,255,255,.6);
+    box-shadow:0 25px 60px rgba(0,0,0,.16);
+    overflow:hidden;
+    animation:drift 6s ease-in-out infinite;
+}
+
+.visual-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(6px);
+    opacity:.7;
+}
+
+.orb-one{
+    width:150px;
+    height:150px;
+    background:radial-gradient(circle, rgba(219,163,33,.3) 0%, rgba(219,163,33,0) 70%);
+    top:-30px;
+    right:-20px;
+}
+
+.orb-two{
+    width:120px;
+    height:120px;
+    background:radial-gradient(circle, rgba(15,23,42,.16) 0%, rgba(15,23,42,0) 70%);
+    bottom:-20px;
+    left:-10px;
+}
+
+.visual-badge{
+    display:inline-block;
+    background:#111827;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+
+.hero-visual-card h3{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.hero-visual-card p{
+    color:#6b7280;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.visual-list{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:10px;
+}
+
+.visual-pill{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#fff;
+    border:1px solid #f2e4bf;
+    border-radius:999px;
+    padding:10px 12px;
+    font-size:13px;
+    color:#111827;
+    font-weight:600;
+}
+
+.visual-pill i{
+    color:#dba321;
+}
+
+.program-showcase,
+.crex-section,
+.specializations-section,
+.outcomes-section,
+.faculty-career-section{
+    padding:100px 0;
+    position:relative;
+}
+
+.program-showcase{
+    background:linear-gradient(180deg, #ffffff 0%, #fcf7ea 100%);
+}
+
+.program-showcase::before,
+.crex-section::before,
+.outcomes-section::before,
+.faculty-career-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:radial-gradient(circle at top left, rgba(219,163,33,.09), transparent 35%);
+}
+
+.section-head{
+    margin-bottom:48px;
+}
+
+.showcase-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:24px;
+    align-items:stretch;
+}
+
+.showcase-card,
+.feature-card,
+.crex-card,
+.specialization-card,
+.outcome-card,
+.mini-card,
+.career-card,
+.learning-panel,
+.career-panel,
+.crex-intro{
+    position:relative;
+    border-radius:24px;
+    overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    animation:fadeUp .8s ease both;
+}
+
+.showcase-card-main{
+    background:linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    color:#fff;
+    padding:34px;
+    box-shadow:0 20px 45px rgba(17,24,39,.18);
+}
+
+.showcase-card-main h3{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    margin-bottom:14px;
+}
+
+.showcase-card-main p,
+.showcase-card-main li{
+    color:rgba(255,255,255,.8);
+    line-height:1.8;
+}
+
+.showcase-card-main ul{
+    list-style:none;
+    padding:0;
+    margin:16px 0 0;
+}
+
+.showcase-card-main li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.showcase-icon{
+    width:56px;
+    height:56px;
+    border-radius:16px;
+    background:rgba(219,163,33,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:18px;
+}
+
+.showcase-icon i{
+    font-size:24px;
+    color:#f6c85f;
+}
+
+.feature-stack{
+    display:grid;
+    gap:16px;
+}
+
+.feature-card{
+    background:#fff;
+    border:1px solid #ececec;
+    padding:24px;
+    box-shadow:0 12px 30px rgba(0,0,0,.04);
+}
+
+.feature-card:hover,
+.crex-card:hover,
+.specialization-card:hover,
+.outcome-card:hover,
+.mini-card:hover,
+.career-card:hover,
+.learning-panel:hover,
+.career-panel:hover,
+.crex-intro:hover{
+    transform:translateY(-8px) scale(1.01);
+    box-shadow:0 20px 45px rgba(0,0,0,.1);
+}
+
+.feature-card h4,
+.crex-card h4,
+.specialization-card h4,
+.outcome-card h4,
+.mini-card h5,
+.career-card h5{
+    font-family:'Playfair Display',serif;
+    font-size:22px;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.feature-card p,
+.crex-card p,
+.crex-card span,
+.specialization-card p,
+.outcome-card p,
+.mini-card p,
+.career-card p,
+.crex-intro p,
+.learning-panel p,
+.career-panel p{
+    color:#6b7280;
+    line-height:1.8;
+    margin:0;
+}
+
+.feature-icon,
+.crex-icon,
+.outcome-icon{
+    width:54px;
+    height:54px;
+    border-radius:16px;
+    background:linear-gradient(135deg, #fff7e6 0%, #ffe9b8 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:16px;
+}
+
+.feature-icon i,
+.crex-icon i,
+.outcome-icon i{
+    color:#dba321;
+    font-size:22px;
+}
+
+.crex-layout,
+.outcomes-layout,
+.faculty-career-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    align-items:stretch;
+}
+
+.crex-intro,
+.learning-panel,
+.career-panel,
+.outcome-hero{
+    background:linear-gradient(135deg, #fffdf8 0%, #f8fafc 100%);
+    border:1px solid #ececec;
+    padding:32px;
+}
+
+.intro-badge{
+    display:inline-block;
+    background:#fff;
+    color:#dba321;
+    border:1px solid rgba(219,163,33,.2);
+    border-radius:999px;
+    padding:8px 12px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:16px;
+}
+
+.crex-intro h3,
+.outcome-hero h3{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    margin-bottom:12px;
+    color:#111827;
+}
+
+.crex-grid,
+.outcome-grid,
+.mini-grid,
+.career-grid{
+    display:grid;
+    gap:14px;
+}
+
+.crex-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+
+.crex-card,
+.outcome-card,
+.mini-card,
+.career-card{
+    background:#fff;
+    border:1px solid #ececec;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.04);
+}
+
+.crex-card{
+    text-align:left;
+    border-top:3px solid #dba321;
+}
+
+.crex-card h4{
+    margin-top:4px;
+}
+
+.specialization-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:16px;
+}
+
+.specialization-card{
+    background:linear-gradient(135deg, #ffffff 0%, #fff9ea 100%);
+    border:1px solid #f1e3bf;
+    padding:22px;
+    min-height:120px;
+}
+
+.specialization-card.featured{
+    background:linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    color:#fff;
+    grid-column:span 1;
+    min-height:140px;
+}
+
+.specialization-card.featured h4,
+.specialization-card.featured p{
+    color:#fff;
+}
+
+.specialization-badge{
+    display:inline-block;
+    background:rgba(219,163,33,.2);
+    color:#f6c85f;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+
+.specialization-note{
+    text-align:center;
+    color:#6b7280;
+    font-size:16px;
+    margin-top:30px;
+}
+
+.outcome-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+
+.outcome-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+.outcome-stats div{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:14px;
+    padding:12px 14px;
+    min-width:100px;
+}
+
+.outcome-stats strong{
+    display:block;
+    font-size:18px;
+    color:#111827;
+}
+
+.outcome-stats span{
+    color:#6b7280;
+    font-size:12px;
+}
+
+.mini-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    margin:24px 0 28px;
+}
+
+.mini-card h5 i,
+.career-card h5 i{
+    color:#dba321;
+    margin-right:6px;
+}
+
+.career-panel-head p{
+    margin-top:8px;
+}
+
+.career-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    margin-top:20px;
+}
+
+.career-card-wide{
+    grid-column:span 2;
+}
+
+.faculty-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(16px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes floatCard{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-6px); }
+}
+
+@keyframes drift{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+}
+
+@media(max-width:991px){
+    .hero-shell,
+    .showcase-grid,
+    .crex-layout,
+    .outcomes-layout,
+    .faculty-career-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-visual{
+        margin-top:10px;
+    }
+
+    .specialization-grid,
+    .crex-grid,
+    .outcome-grid,
+    .mini-grid,
+    .career-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+    .program-showcase,
+    .crex-section,
+    .specializations-section,
+    .outcomes-section,
+    .faculty-career-section{
+        padding:80px 0;
+    }
+}
+
+@media(max-width:768px){
+    .hero-section{
+        min-height:auto;
+        padding:80px 0;
+    }
+
+    .hero-metrics,
+    .visual-list,
+    .specialization-grid,
+    .crex-grid,
+    .outcome-grid,
+    .mini-grid,
+    .career-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .showcase-card-main,
+    .crex-intro,
+    .learning-panel,
+    .career-panel,
+    .outcome-hero,
+    .hero-visual-card{
+        padding:24px;
+    }
+}
+
+@media(max-width:576px){
+    .program-showcase,
+    .crex-section,
+    .specializations-section,
+    .outcomes-section,
+    .faculty-career-section{
+        padding:70px 0;
+    }
+
+    .hero-subtext{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-buttons .secondary-btn,
+    .hero-buttons .primary-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .metric-tile{
+        padding:14px;
+    }
 }
