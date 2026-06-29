@@ -1512,48 +1512,123 @@ body{
     margin-top:4px;
 }
 
-.specialization-grid{
+.specialization-explorer{
     display:grid;
-    grid-template-columns:repeat(3, minmax(0, 1fr));
-    gap:16px;
+    grid-template-columns:280px minmax(0, 1fr);
+    gap:20px;
+    align-items:stretch;
 }
 
-.specialization-card{
-    background:linear-gradient(135deg, #ffffff 0%, #fff9ea 100%);
-    border:1px solid #f1e3bf;
-    padding:22px;
-    min-height:120px;
+.specialization-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
-.specialization-card.featured{
+.specialization-item{
+    width:100%;
+    text-align:left;
+    border:none;
+    background:#fff;
+    color:#111827;
+    padding:16px 18px;
+    border-radius:16px;
+    border:1px solid #efe3bf;
+    font-weight:600;
+    transition:all .25s ease;
+}
+
+.specialization-item:hover,
+.specialization-item.active{
     background:linear-gradient(135deg, #111827 0%, #1f2937 100%);
     color:#fff;
-    grid-column:span 1;
-    min-height:140px;
+    box-shadow:0 16px 30px rgba(17,24,39,.12);
+    transform:translateX(4px);
 }
 
-.specialization-card.featured h4,
-.specialization-card.featured p{
-    color:#fff;
+.specialization-panel{
+    background:linear-gradient(135deg, #fffdf8 0%, #f8fafc 100%);
+    border:1px solid #ececec;
+    border-radius:28px;
+    padding:32px;
+    min-height:340px;
 }
 
-.specialization-badge{
+.panel-chip{
     display:inline-block;
-    background:rgba(219,163,33,.2);
-    color:#f6c85f;
-    padding:6px 10px;
+    background:#fff;
+    color:#dba321;
+    border:1px solid rgba(219,163,33,.2);
     border-radius:999px;
+    padding:8px 12px;
     font-size:12px;
     font-weight:700;
     letter-spacing:1px;
-    margin-bottom:12px;
+    margin-bottom:16px;
 }
 
-.specialization-note{
-    text-align:center;
+.specialization-panel h3{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.specialization-panel p{
     color:#6b7280;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.panel-block{
+    margin-top:20px;
+}
+
+.panel-block h4{
     font-size:16px;
-    margin-top:30px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.focus-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:grid;
+    gap:8px;
+}
+
+.focus-list li{
+    position:relative;
+    padding-left:18px;
+    color:#475467;
+}
+
+.focus-list li::before{
+    content:"•";
+    position:absolute;
+    left:0;
+    color:#dba321;
+}
+
+.career-pill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.career-pill-list span{
+    display:inline-flex;
+    align-items:center;
+    border-radius:999px;
+    padding:8px 12px;
+    background:#fff;
+    border:1px solid #efe3bf;
+    font-size:14px;
+    color:#111827;
 }
 
 .outcome-grid{
@@ -1601,13 +1676,72 @@ body{
     margin-top:8px;
 }
 
-.career-grid{
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    margin-top:20px;
+.career-roadmap{
+    position:relative;
+    margin-top:24px;
+    display:grid;
+    gap:14px;
 }
 
-.career-card-wide{
-    grid-column:span 2;
+.career-roadmap::before{
+    content:"";
+    position:absolute;
+    left:12px;
+    top:10px;
+    bottom:10px;
+    width:1px;
+    background:linear-gradient(180deg, #dba321 0%, rgba(219,163,33,.15) 100%);
+}
+
+.roadmap-step{
+    position:relative;
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+}
+
+.roadmap-dot{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#111827;
+    border:4px solid #ffe5aa;
+    box-shadow:0 0 0 4px rgba(219,163,33,.12);
+    position:relative;
+    z-index:1;
+    margin-top:5px;
+}
+
+.roadmap-card{
+    flex:1;
+    background:#fff;
+    border:1px solid #ececec;
+    padding:16px 18px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.04);
+}
+
+.roadmap-label{
+    display:inline-block;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#dba321;
+    margin-bottom:6px;
+}
+
+.roadmap-card h5{
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    margin-bottom:6px;
+    color:#111827;
+}
+
+.roadmap-card p{
+    margin:0;
+    color:#6b7280;
+    line-height:1.7;
 }
 
 .faculty-btn{
@@ -1650,11 +1784,10 @@ body{
         margin-top:10px;
     }
 
-    .specialization-grid,
+    .specialization-explorer,
     .crex-grid,
     .outcome-grid,
-    .mini-grid,
-    .career-grid{
+    .mini-grid{
         grid-template-columns:repeat(2, minmax(0, 1fr));
     }
 
@@ -1675,11 +1808,10 @@ body{
 
     .hero-metrics,
     .visual-list,
-    .specialization-grid,
+    .specialization-explorer,
     .crex-grid,
     .outcome-grid,
-    .mini-grid,
-    .career-grid{
+    .mini-grid{
         grid-template-columns:1fr;
     }
 

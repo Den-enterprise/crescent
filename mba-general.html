@@ -220,25 +220,45 @@
             <div class="section-head text-center">
                 <span class="section-tag">SPECIALISATIONS</span>
                 <h2 class="section-title">Choose the MBA Path That Fits Your Future.</h2>
+                <p class="section-description mx-auto">
+                    Explore the domains that shape leadership, growth and business impact. Each path is designed for a different ambition and career direction.
+                </p>
             </div>
 
-            <div class="specialization-grid">
-                <div class="specialization-card featured">
-                    <div class="specialization-badge">Popular</div>
-                    <h4>Marketing</h4>
-                    <p>Sales, branding, digital growth</p>
+            <div class="specialization-explorer" role="tablist" aria-label="MBA specialization explorer">
+                <div class="specialization-list">
+                    <button class="specialization-item active" data-specialization="marketing" role="tab" aria-selected="true">Marketing</button>
+                    <button class="specialization-item" data-specialization="finance" role="tab" aria-selected="false">Finance</button>
+                    <button class="specialization-item" data-specialization="hr" role="tab" aria-selected="false">HRM</button>
+                    <button class="specialization-item" data-specialization="operations" role="tab" aria-selected="false">Operations</button>
+                    <button class="specialization-item" data-specialization="analytics" role="tab" aria-selected="false">Business Analytics</button>
+                    <button class="specialization-item" data-specialization="entrepreneurship" role="tab" aria-selected="false">Entrepreneurship</button>
                 </div>
-                <div class="specialization-card"><h4>Finance</h4><p>Banking, investment, analysis</p></div>
-                <div class="specialization-card"><h4>HRM</h4><p>People, hiring, culture</p></div>
-                <div class="specialization-card"><h4>Operations</h4><p>Process, quality, execution</p></div>
-                <div class="specialization-card"><h4>Business Analytics</h4><p>Data, insights, decisions</p></div>
-                <div class="specialization-card"><h4>Entrepreneurship</h4><p>Startup and business building</p></div>
-                <div class="specialization-card"><h4>Logistics &amp; Supply Chain</h4><p>Planning, movement, operations</p></div>
-                <div class="specialization-card"><h4>Alternative Finance</h4><p>Modern finance opportunities</p></div>
-                <div class="specialization-card"><h4>International Business</h4><p>Global trade and markets</p></div>
-            </div>
 
-            <p class="specialization-note">Pick your domain. Build your skills. Prepare for the career you want.</p>
+                <div class="specialization-panel" id="specialization-panel" aria-live="polite">
+                    <div class="panel-chip">Featured specialization</div>
+                    <h3 id="specialization-title">Marketing</h3>
+                    <p id="specialization-description">Build strategy, brand positioning and customer growth skills for modern organisations.</p>
+
+                    <div class="panel-block">
+                        <h4>Key focus areas</h4>
+                        <ul id="focus-list" class="focus-list">
+                            <li>Brand strategy</li>
+                            <li>Consumer behaviour</li>
+                            <li>Digital growth</li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-block">
+                        <h4>Career opportunities</h4>
+                        <div id="career-list" class="career-pill-list">
+                            <span>Brand Manager</span>
+                            <span>Growth Marketer</span>
+                            <span>Sales Strategist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -320,14 +340,39 @@
                         <h3 class="sub-heading">Career Pathways</h3>
                         <p>Step into the kind of professional paths that match your strengths and ambitions.</p>
                     </div>
-                    <div class="career-grid">
-                        <div class="career-card"><h5>Management Trainee</h5><p>Start your corporate career</p></div>
-                        <div class="career-card"><h5>Business Development</h5><p>Grow sales and markets</p></div>
-                        <div class="career-card"><h5>Financial Analyst</h5><p>Work in banking and finance</p></div>
-                        <div class="career-card"><h5>HR Executive</h5><p>Build people and teams</p></div>
-                        <div class="career-card"><h5>Operations Executive</h5><p>Manage process and performance</p></div>
-                        <div class="career-card"><h5>Business Analyst</h5><p>Use data for decisions</p></div>
-                        <div class="career-card career-card-wide"><h5>Entrepreneur</h5><p>Build your own business path</p></div>
+                    <div class="career-roadmap">
+                        <div class="roadmap-step">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-card">
+                                <span class="roadmap-label">Foundation</span>
+                                <h5>MBA Foundation</h5>
+                                <p>Build business, leadership and communication fundamentals.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-step">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-card">
+                                <span class="roadmap-label">Exposure</span>
+                                <h5>Industry Exposure</h5>
+                                <p>Learn through expert sessions, projects and live cases.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-step">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-card">
+                                <span class="roadmap-label">Placement</span>
+                                <h5>Career Launch</h5>
+                                <p>Step into roles such as analyst, manager or trainee.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-step">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-card">
+                                <span class="roadmap-label">Leadership</span>
+                                <h5>Leadership Growth</h5>
+                                <p>Grow into higher responsibility or entrepreneurial paths.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
