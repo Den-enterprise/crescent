@@ -37,7 +37,7 @@
                     <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
                 </ul>
 
-                <a href="https://admissions.crescent.education/mba-and-mca-programme-application" class="btn apply-btn">
+                <a href="#hero" class="btn apply-btn">
                     Apply Now
                 </a>
             </div>
@@ -45,7 +45,7 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero-section">
+    <section class="hero-section py-5" id="hero">
         <div class="hero-video-wrapper">
             <video class="hero-video" autoplay muted loop playsinline poster="images/hero-bg.webp">
                 <source src="https://crescent.education//wp-content//uploads//2025//05//BSACIST-3-26052025.mp4" type="video/mp4">
@@ -73,7 +73,7 @@
                     </p>
 
                     <div class="hero-buttons align-items-center">
-                        <a href="https://admissions.crescent.education/mba-and-mca-Programme-application" class="btn primary-btn">
+                        <a href="#hero" class="btn primary-btn">
                             Apply Now
                         </a>
                         <a href="#Programme" class="btn secondary-btn">
@@ -106,27 +106,146 @@
                 </div>
 
                 <div class="hero-visual">
-                    <div class="hero-visual-card">
-                        <div class="visual-orb orb-one"></div>
-                        <div class="visual-orb orb-two"></div>
-                        <div class="visual-badge">Career Accelerator</div>
-                        <h3>Leadership. Strategy. Growth.</h3>
-                        <p>Designed to give students practical knowledge, exposure, and the confidence to launch strong careers.</p>
 
-                        <div class="visual-list">
-                            <div class="visual-pill"><i class="bi bi-award"></i> NBA Accredited</div>
-                            <div class="visual-pill"><i class="bi bi-globe2"></i> Industry Exposure</div>
-                            <div class="visual-pill"><i class="bi bi-briefcase"></i> Placement Support</div>
-                            <div class="visual-pill"><i class="bi bi-graph-up-arrow"></i> Entrepreneurship Ready</div>
-                        </div>
+                    <div class="hero-form-card">
+
+                        <span class="form-badge">
+                            Admissions Open
+                        </span>
+
+                        <h3>Fill the form below to know more</h3>
+
+                        <form id="leadForm">
+
+                            <div class="mb-3">
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    placeholder="Enter Student Name *"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    name="phone"
+                                    placeholder="Enter Mobile Number *"
+                                    pattern="[0-9]{10}"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    name="email"
+                                    placeholder="Enter Email Address *"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <select
+                                    class="form-select"
+                                    name="education"
+                                    required>
+
+                                    <option value="">
+                                        What is the student doing currently?
+                                    </option>
+
+                                    <option>
+                                        Studying as Under Graduate (UG)
+                                    </option>
+
+                                    <option>
+                                        Completed UG
+                                    </option>
+
+                                    <option>
+                                        Studying / Completed PG
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <select
+                                    class="form-select"
+                                    name="programme"
+                                    required>
+
+                                    <option value="MBA General" selected>
+                                        MBA General
+                                    </option>
+
+                                    <option>
+                                        MBA-IEV (Innovation, Entrepreneurship & Venture Development)
+                                    </option>
+
+                                    <option>
+                                        Others
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="form-check mb-4">
+
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="consent"
+                                    required>
+
+                                <label
+                                    class="form-check-label"
+                                    for="consent">
+
+                                    I authorize B.S. Abdur Rahman Crescent Institute of Science &
+                                    Technology and its representatives to contact me through
+                                    Email, SMS, WhatsApp or Call.
+
+                                </label>
+
+                            </div>
+
+                            <button
+                                class="btn submit-btn w-100"
+                                type="submit">
+
+                                Submit
+
+                            </button>
+
+                            <div id="responseMsg"></div>
+
+                        </form>
+
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programme SECTION -->
-    <section class="Programme-showcase" id="Programme">
+    <section class="Programme-showcase py-5" id="Programme">
         <div class="container">
             <div class="section-head text-center">
                 <span class="section-tag">MBA GENERAL</span>
@@ -172,7 +291,7 @@
     </section>
 
     <!-- CREX SECTION -->
-    <section class="crex-section">
+    <section class="crex-section py-5">
         <div class="container">
             <div class="section-head text-center">
                 <span class="section-tag">CREX — CRESCENT EXPERIENCE</span>
@@ -184,7 +303,7 @@
                     <div class="intro-badge">Experience Beyond the Classroom</div>
                     <h3>Every learning moment is shaped to build real-world confidence.</h3>
                     <p>From live projects to industry connections, the Crescent experience is designed to make you sharper, more employable, and more ready for leadership.</p>
-                    <a href="https://admissions.crescent.education/mba-and-mca-Programme-application" class="btn primary-btn">
+                    <a href="#hero" class="btn primary-btn">
                         Apply Now
                     </a>
                 </div>
@@ -223,7 +342,7 @@
     </section>
 
     <!-- SPECIALIZATIONS -->
-    <section class="specializations-section" id="specializations">
+    <section class="specializations-section py-5" id="specializations">
         <div class="container">
             <div class="section-head text-center">
                 <span class="section-tag">SPECIALISATIONS</span>
@@ -272,9 +391,504 @@
             </div>
         </div>
     </section>
+    <!-- ==========================================================
+        MBA IEV SECTION
+    =========================================================== -->
+
+    <section class="iev-section" id="mba-iev">
+
+        <div class="container">
+
+            <div class="row align-items-center gy-5">
+
+                <!-- LEFT SIDE -->
+
+                <div class="col-lg-5">
+
+                    <span class="iev-badge">
+
+                        <i class="bi bi-stars"></i>
+
+                        MBA-IEV
+
+                    </span>
+
+                    <h2 class="iev-title">
+
+                        MBA in Innovation,
+                        Entrepreneurship &
+                        <span>Venture Development</span>
+
+                    </h2>
+
+                    <h5 class="iev-subtitle">
+
+                        Build Startups.
+                        Scale Businesses.
+                        Lead the Future.
+
+                    </h5>
+
+                    <p class="iev-description">
+
+                        MBA-IEV combines management education,
+                        venture building and startup execution.
+                        Learn from founders, industry experts,
+                        mentors and investors while gaining access
+                        to CIIC's thriving startup ecosystem,
+                        incubation facilities and funding opportunities.
+
+                    </p>
+
+                    <div class="iev-buttons">
+
+                        <a href="#admissions"
+                            class="btn primary-btn">
+
+                            Apply Now
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="btn outline-btn">
+
+                            <i class="bi bi-bank"></i>
+
+                            Explore CIIC
+
+                        </a>
+
+                    </div>
+
+                    <!-- Illustration -->
+
+                    <div class="iev-campus">
+
+                        <img
+                            src="images/ciic.webp"
+                            class="img-fluid"
+                            alt="CIIC">
+
+                        <div class="journey-line">
+
+                            <span>IDEA</span>
+
+                            <span>BUILD</span>
+
+                            <span>LAUNCH</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+
+                <div class="col-lg-7">
+
+                    <!-- STATS -->
+
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+
+                            <div class="iev-stat-card reveal">
+
+                                <div class="stat-icon">
+
+                                    <i class="bi bi-cash-stack"></i>
+
+                                </div>
+
+                                <h3
+                                    class="counter"
+                                    data-target="43">
+
+                                    0
+
+                                </h3>
+
+                                <span class="suffix">
+
+                                    Cr+
+
+                                </span>
+
+                                <div class="stat-line"></div>
+
+                                <p>
+
+                                    Startup Grants Awarded
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="iev-stat-card reveal">
+
+                                <div class="stat-icon">
+
+                                    <i class="bi bi-graph-up-arrow"></i>
+
+                                </div>
+
+                                <h3
+                                    class="counter"
+                                    data-target="828">
+
+                                    0
+
+                                </h3>
+
+                                <span class="suffix">
+
+                                    Cr+
+
+                                </span>
+
+                                <div class="stat-line"></div>
+
+                                <p>
+
+                                    Incubated Startup Revenue
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="iev-stat-card reveal">
+
+                                <div class="stat-icon">
+
+                                    <i class="bi bi-award"></i>
+
+                                </div>
+
+                                <h3
+                                    class="counter"
+                                    data-target="100">
+
+                                    0
+
+                                </h3>
+
+                                <span class="suffix">
+
+                                    %
+
+                                </span>
+
+                                <div class="stat-line"></div>
+
+                                <p>
+
+                                    Placement Assistance
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- FEATURES -->
+
+                    <div class="graduate-box reveal">
+
+                        <div class="graduate-heading">
+
+                            <span></span>
+
+                            WHAT YOU'LL GRADUATE WITH
+
+                            <span></span>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <div class="graduate-item">
+
+                                    <div class="graduate-icon">
+
+                                        <i class="bi bi-lightbulb"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5>Founder's Mindset</h5>
+
+                                        <p>
+
+                                            Think like a founder.
+                                            Lead like an entrepreneur.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="graduate-item">
+
+                                    <div class="graduate-icon">
+
+                                        <i class="bi bi-rocket"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5>Build & Validate</h5>
+
+                                        <p>
+
+                                            Develop and validate a
+                                            working startup prototype.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="graduate-item">
+
+                                    <div class="graduate-icon">
+
+                                        <i class="bi bi-currency-rupee"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5>Seed Funding</h5>
+
+                                        <p>
+
+                                            Access funding opportunities
+                                            for your venture.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="graduate-item">
+
+                                    <div class="graduate-icon">
+
+                                        <i class="bi bi-briefcase"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5>Launch & Scale</h5>
+
+                                        <p>
+
+                                            Launch your startup or
+                                            scale your family business.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="graduate-item">
+
+                                    <div class="graduate-icon">
+
+                                        <i class="bi bi-people"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5>Mentors & Investors</h5>
+
+                                        <p>
+
+                                            Learn from CIIC's
+                                            startup ecosystem.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="graduate-item">
+
+                                    <div class="graduate-icon">
+
+                                        <i class="bi bi-person-workspace"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5>Career Ready</h5>
+
+                                        <p>
+
+                                            Startup, Corporate
+                                            or Intrapreneurship.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM STRIP -->
+
+            <div class="iev-footer reveal">
+
+                <div class="feature-pill">
+
+                    <i class="bi bi-bank"></i>
+
+                    <div>
+
+                        <h6>
+
+                            Industry Integrated Curriculum
+
+                        </h6>
+
+                        <small>
+
+                            Learn through real ventures.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="feature-pill">
+
+                    <i class="bi bi-person-badge"></i>
+
+                    <div>
+
+                        <h6>
+
+                            Learn from Industry Leaders
+
+                        </h6>
+
+                        <small>
+
+                            Founders, CXOs & Mentors.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="feature-pill">
+
+                    <i class="bi bi-people-fill"></i>
+
+                    <div>
+
+                        <h6>
+
+                            Startup Ecosystem
+
+                        </h6>
+
+                        <small>
+
+                            CIIC's thriving innovation network.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="feature-pill">
+
+                    <i class="bi bi-graph-up-arrow"></i>
+
+                    <div>
+
+                        <h6>
+
+                            100% Placement Support
+
+                        </h6>
+
+                        <small>
+
+                            Career readiness & guidance.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- OUTCOMES -->
-    <section class="outcomes-section">
+    <section class="outcomes-section py-5">
         <div class="container">
             <div class="section-head text-center">
                 <span class="section-tag">OUTCOMES</span>
@@ -324,7 +938,7 @@
     </section>
 
     <!-- FACULTY + CAREER PATHWAYS -->
-    <section class="faculty-career-section" id="faculty">
+    <section class="faculty-career-section py-5" id="faculty">
         <div class="container">
             <div class="faculty-career-grid">
                 <div class="learning-panel">
@@ -391,7 +1005,7 @@
     </section>
 
     <!-- FINAL CTA + FOOTER -->
-    <footer class="footer-section">
+    <footer class="footer-section pt-3">
 
         <!-- CTA AREA -->
         <div class="footer-cta" id="admissions">
@@ -416,7 +1030,7 @@
 
                     <div class="cta-buttons">
 
-                        <a href="https://admissions.crescent.education/mba-and-mca-Programme-application" class="btn footer-apply-btn">
+                        <a href="#hero" class="btn footer-apply-btn">
                             Apply Now →
                         </a>
 
@@ -526,6 +1140,11 @@
         </div>
 
     </footer>
+
+    <script>
+
+    </script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
